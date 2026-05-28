@@ -31,3 +31,8 @@ input {
   /* 縦幅 */
   height: 26px;
 }
+
+/* ツイートボタン */
+.twitter-hashtag-button {
+  margin-top: 15px;
+}

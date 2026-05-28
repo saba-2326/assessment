@@ -1,0 +1,33 @@
+/* 全体 */
+body {
+  /* 背景色 */
+  background-color: #6ecdf6; 
+  /* 旧カラー:#04a6eb */
+  color: #fdffff;
+
+  /* 真ん中に寄せる */
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 診断ボタン */
+button {
+  /*ボタンの大きさ、色 */
+  padding: 5px 10px;
+  background-color: #5492c9;
+  /* 旧カラー:#337ab7; */
+
+  /* 枠線を消す */
+  border-style: none;
+
+  /* 文字色を揃える(練習1) */
+  color: #fdffff;
+
+}
+
+/* 入力欄 */
+input {
+  /* 縦幅 */
+  height: 26px;
+}

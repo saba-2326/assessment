@@ -1,8 +1,8 @@
 'use strict';
-const userNameInput    = document.getElementById('userName');
+const userNameInput    = document.getElementById('user-name');
 const assessmentButton = document.getElementById('assessment');
-const resultDivision   = document.getElementById('result_area');
-const tweetDivision    = document.getElementById('tweet_area');
+const resultDivision   = document.getElementById('result-area');
+const tweetDivision    = document.getElementById('tweet-area');
 
 
  
@@ -25,14 +25,35 @@ assessmentButton.addEventListener(//イベント検知
     }
 
     //診断結果表示エリアの作成
-    const header = document.createElement('h3');//h3タグの作成
-    header.innerText = '診断結果';//タグの内側のテキストを設定
-    resultDivision.appendChild(header);//divタグの子要素として追加
+    // resultDivision=""; ←エラーの原因になるので消します。
+    // const header = document.createElement('h3');//h3タグの作成
+    // header.innerText = '診断結果';//タグの内側のテキストを設定
+    // resultDivision.appendChild(header);//divタグの子要素として追加
 
-    const paragraph = document.createElement('p');//pタグの作成
-    const result = assessment(userName);//診断結果の取得
-    paragraph.innerText = result;//pタグの内側のテキストに診断結果を設定
-    resultDivision.appendChild(paragraph);//divタグの小要素として追加
+    // const paragraph = document.createElement('p');//pタグの作成
+    // const result = assessment(userName);//診断結果の取得
+    // paragraph.innerText = result;//pタグの内側のテキストに診断結果を設定
+    // resultDivision.appendChild(paragraph);//divタグの小要素として追加
+
+//カードエリアの作成
+    const headerDivision = document.createElement('div');//カードのdivを作成
+    headerDivision.setAttribute('class', 'card-header text-bg-primary');//
+    headerDivision.innerText = '診断結果';
+
+    //bodyDivision の作成
+    const bodyDivision = document.createElement('div');
+    bodyDivision.setAttribute('class', 'card-body');
+
+    const paragraph = document.createElement('p');
+    paragraph.setAttribute('class', 'card-text');
+    const result = assessment(userName);
+    paragraph.innerText = result;
+    bodyDivision.appendChild(paragraph);
+
+    resultDivision.setAttribute('class', 'card');
+    resultDivision.appendChild(headerDivision);
+    resultDivision.appendChild(bodyDivision);
+
 
 
   //ツイートボタンを作成する
